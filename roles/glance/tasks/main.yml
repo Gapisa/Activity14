@@ -1,0 +1,7 @@
+---
+
+- name: Install glance packages
+  apt:
+    name: glance
+    state: latest
+

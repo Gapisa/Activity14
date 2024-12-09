@@ -1,0 +1,14 @@
+---
+
+- name: Install the keystone and glance packages
+  hosts: controller
+  become: yes
+  roles:
+    - keystone
+    - glance
+
+- name: Install nova compute packages
+  hosts: compute
+  become: yes
+  roles:
+    - nova

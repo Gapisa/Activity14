@@ -1,0 +1,12 @@
+---
+
+- name: Install nova packages
+  apt:
+    name: nova-compute
+    state: present
+
+- name: start and enable nova package
+  service:
+    name: nova-compute
+    state: started
+    enabled: yes
